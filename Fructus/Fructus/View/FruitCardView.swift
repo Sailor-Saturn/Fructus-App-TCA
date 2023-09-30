@@ -36,8 +36,8 @@ struct FruitCardView: View {
                 }
             }
             .onAppear() {
-                withAnimation(.easeInOut(duration: 2.5)) {
-                    isAnimating = false
+                withAnimation(.easeOut(duration: 0.5)) {
+                    isAnimating = true
                 }
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)

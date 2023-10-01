@@ -9,10 +9,10 @@ import SwiftUI
 
 struct StartButtonView: View {
     // MARK: - Properties
-    
+    @State var action: () -> Void
     // MARK: - Body
     var body: some View {
-        Button(action: {print("Exist Onboarding")}){
+        Button(action: action){
             HStack(spacing: 8){
                 Text("Start")
                 Image(systemName: "arrow.right.circle")
@@ -32,7 +32,7 @@ struct StartButtonView: View {
 #Preview {
     ZStack{
         Color.black
-        StartButtonView()
+        StartButtonView(action: {})
     }
     .previewLayout(.sizeThatFits)
     .ignoresSafeArea()

@@ -20,6 +20,7 @@ struct OnboardingView: View {
 
 // MARK: Reducer
 struct OnboardingReducer: Reducer {
+    @AppStorage("isOnboarding") var isOnboarding: Bool?
     struct State: Equatable {
         var fruits: IdentifiedArrayOf<FruitCardReducer.State>
     }
@@ -31,6 +32,10 @@ struct OnboardingReducer: Reducer {
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
+            case .fruit(_, action: .delegate(.buttonTapped)):
+                // Why cant I add the app storage to the state struct?
+                isOnboarding = false
+                return .none
             case .fruit(_, _):
                 return .none
             }

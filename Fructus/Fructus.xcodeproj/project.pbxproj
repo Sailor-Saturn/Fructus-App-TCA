@@ -21,6 +21,7 @@
 		0BD5DDAB2AC8C7DD003D8CC4 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5DDAA2AC8C7DD003D8CC4 /* Fruit.swift */; };
 		0BD5DDAE2AC8C824003D8CC4 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 0BD5DDAD2AC8C824003D8CC4 /* ComposableArchitecture */; };
 		0BD5DDB12AC8C9EB003D8CC4 /* FruitMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5DDB02AC8C9EB003D8CC4 /* FruitMock.swift */; };
+		0BD5DDB32ACA065C003D8CC4 /* FruitRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5DDB22ACA065C003D8CC4 /* FruitRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		0BD5DDA72AC8C5D7003D8CC4 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		0BD5DDAA2AC8C7DD003D8CC4 /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 		0BD5DDB02AC8C9EB003D8CC4 /* FruitMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitMock.swift; sourceTree = "<group>"; };
+		0BD5DDB22ACA065C003D8CC4 /* FruitRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			children = (
 				0BD5DDA32AC8B7EF003D8CC4 /* FruitCardView.swift */,
 				0BD5DDA52AC8C1B0003D8CC4 /* StartButtonView.swift */,
+				0BD5DDB22ACA065C003D8CC4 /* FruitRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			files = (
 				0BD5DDAB2AC8C7DD003D8CC4 /* Fruit.swift in Sources */,
 				0BD5DDA42AC8B7EF003D8CC4 /* FruitCardView.swift in Sources */,
+				0BD5DDB32ACA065C003D8CC4 /* FruitRowView.swift in Sources */,
 				0BD5DDA62AC8C1B0003D8CC4 /* StartButtonView.swift in Sources */,
 				0BD5DDB12AC8C9EB003D8CC4 /* FruitMock.swift in Sources */,
 				0B9606FF2AC4C76C00DC49D7 /* ContentView.swift in Sources */,

@@ -32,7 +32,7 @@ struct FruitCardView: View {
                         .padding(.horizontal, 16)
                         .frame(maxWidth: 480)
                     
-                    StartButtonView()
+                    StartButtonView(action: {viewStore.send(.view(.buttonTapped))})
                 }
             }
             .onAppear() {
@@ -56,11 +56,23 @@ struct FruitCardReducer: Reducer {
     }
     
     enum Action {
+        case view(ViewAction)
+        case delegate(Delegate)
+        enum ViewAction {
+            case buttonTapped
+        }
+        enum Delegate {
+            case buttonTapped
+        }
     }
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
+            case .view(.buttonTapped):
+                return .send(.delegate(.buttonTapped))
+            case .delegate(_):
+                return .none
             }
         }
     }

@@ -50,11 +50,8 @@ struct FruitCardView: View {
 
 // MARK: Reducer
 struct FruitCardReducer: Reducer {
-    struct State: Equatable, Identifiable {
-        let id: UUID
-        var fruit: Fruit
-    }
-    
+    typealias State = FruitViewModel
+
     enum Action {
         case view(ViewAction)
         case delegate(Delegate)
@@ -80,7 +77,7 @@ struct FruitCardReducer: Reducer {
 
 // MARK: - Preview
 #Preview {
-    FruitCardView(store: .init(initialState: FruitCardReducer.State(id: Fruit.blueberry.id, fruit: .blueberry)){
+    FruitCardView(store: .init(initialState: FruitViewModel(id: Fruit.blueberry.id, fruit: .blueberry)){
         FruitCardReducer()
     })
 }

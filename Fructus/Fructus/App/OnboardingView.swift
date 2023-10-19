@@ -1,6 +1,7 @@
 import ComposableArchitecture
 import SwiftUI
 
+
 struct OnboardingView: View {
     // MARK: - Properties
     let store: StoreOf<OnboardingReducer>
@@ -22,7 +23,7 @@ struct OnboardingView: View {
 struct OnboardingReducer: Reducer {
     @AppStorage("isOnboarding") var isOnboarding: Bool?
     struct State: Equatable {
-        var fruits: IdentifiedArrayOf<FruitCardReducer.State>
+        var fruits: IdentifiedArrayOf<FruitViewModel>
     }
     
     enum Action {
